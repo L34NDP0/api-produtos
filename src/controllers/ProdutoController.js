@@ -52,6 +52,15 @@ module.exports = {
 
   alterar: async (req, res) => {
     const { id_produto } = req.params;
+    const produto = await ProdutoService.buscarUm(id_produto);
+
+    if (!produto) {
+      return res.json({
+        success: false,
+        error: "Não foi possível localizar o produto a ser alterado.",
+      });
+    }
+
     const { nome_produto, marca_produto, valor_produto, validade_produto } =
       req.body;
 
