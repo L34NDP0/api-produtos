@@ -16,4 +16,4 @@ CREATE TABLE tbl_produtos (
   PRIMARY KEY (id_produto)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
-4) Rodar o comando 'npm run start' para rodar a api
+5) Rodar o comando 'npm run start' para rodar a api
